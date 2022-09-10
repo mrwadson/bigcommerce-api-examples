@@ -1,0 +1,25 @@
+{
+    "name": "mrwadson/bigcommerce-api-examples",
+    "description": "BigCommerce API usage examples",
+    "homepage": "https://mrwadson.ru",
+    "authors": [
+        {
+            "name": "Vadim Danilov",
+            "email": "mrwadson@mail.ru"
+        }
+    ],
+    "version": "0.1",
+    "require": {
+        "php": ">=7.0",
+        "bigcommerce/api": "^3.3",
+        "vlucas/phpdotenv": "^5.4",
+        "monolog/monolog": "^2.8",
+        "ext-json": "*",
+        "firebase/php-jwt": "5.5.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}

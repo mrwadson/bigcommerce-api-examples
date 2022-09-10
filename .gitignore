@@ -1,0 +1,7 @@
+.nbproject
+.idea
+.DS_Store
+vendor/
+log/*
+!log/.gitkeep
+.env
