@@ -2,10 +2,13 @@
 
 namespace App;
 
+use Bigcommerce\Api\Resources\Page;
+
 class PageRequest extends AbstractRequest
 {
-    public function getPages(): array
+    public function getPages(array $filter = []): array
     {
-        return $this->getItems('page');
+        /** @see Page */
+        return $this->getItems('pages', $filter);
     }
 }

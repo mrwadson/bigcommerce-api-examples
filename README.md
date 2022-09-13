@@ -1,6 +1,6 @@
 # BigCommerce Api examples
 
-Example of using BigCommerce REST API for getting data.
+Example of using BigCommerce REST API V2 for fetching data.
 
 ## Requirements
 
@@ -28,19 +28,30 @@ To generate an OAuth API token, [follow this guide](https://support.bigcommerce.
 
 ## Usage
 
-Below run example to log all [customers, products, orders, pages] from BigCommerce site:
+Below run example to log [customers, products, orders, pages, coupons, product options] from BigCommerce site:
 
 ```php
-php read.php
+php get_customers.php
+php get_products.php
+php get_orders.php
+php get_pages.php
+php get_coupons.php
+php get_product_options.php
 ```
 
-It will log:
+It will log accordingly:
 - All customers data to `log/customers.log` file
 - All products to `log/products.log` file
 - All orders to `log/orders.log` file
 - All pages to `log/pages.log` file
+- All coupons to `log/coupons.log` file
+- All product options to `log/product_options.log` file
 
 ## Help
 
-To find more specific information please see official github repo:
-https://github.com/bigcommerce/bigcommerce-api-php
+To find more specific information please see official GitHub repo:
+- https://github.com/bigcommerce/bigcommerce-api-php
+
+Official APi Reference:
+- https://developer.bigcommerce.com/api-reference
+- https://developer.bigcommerce.com/legacy/

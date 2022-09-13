@@ -2,10 +2,13 @@
 
 namespace App;
 
+use Bigcommerce\Api\Resources\Order;
+
 class OrderRequest extends AbstractRequest
 {
-    public function getOrders(): array
+    public function getOrders(array $filter = []): array
     {
-        return $this->getItems('order');
+        /** @see Order */
+        return $this->getItems('orders', $filter);
     }
 }

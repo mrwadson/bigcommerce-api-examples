@@ -2,10 +2,13 @@
 
 namespace App;
 
+use Bigcommerce\Api\Resources\Product;
+
 class ProductRequest extends AbstractRequest
 {
-    public function getProducts(): array
+    public function getProducts(array $filter = []): array
     {
-        return $this->getItems('product');
+        /** @see Product */
+        return $this->getItems('products', $filter);
     }
 }
