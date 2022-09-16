@@ -29,15 +29,15 @@ abstract class AbstractRequest
         return $result;
     }
 
-    protected function getAllFields(Resource $resource): array
+    protected function getAllFields(Resource $resource): stdClass
     {
-        $result = [];
+        $class = new stdClass();
         if ($fields = $resource->getCreateFields()) {
             foreach ($fields as $key => $field) {
-                $result[$key] = $this->processField($field, $resource, $key);
+                $class->{$key} = $this->processField($field, $resource, $key);
             }
         }
-        return $result;
+        return $class;
     }
 
     private function processField($field, Resource $resource = null, string $key = null)

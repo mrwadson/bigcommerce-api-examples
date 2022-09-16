@@ -4,8 +4,8 @@ Example of using BigCommerce REST API V2 for fetching data.
 
 ## Requirements
 
-- PHP 7.0 or greater
-- Url extension enabled
+- PHP >= 7.0
+- cUrl extension enabled
 
 ## Installation
 
@@ -28,7 +28,7 @@ To generate an OAuth API token, [follow this guide](https://support.bigcommerce.
 
 ## Usage
 
-Below run example to log [customers, products, orders, pages, coupons, product options] from BigCommerce site:
+Below run example to log [customers, products, orders, pages, coupons, product options, categories, currencies, brands] from BigCommerce site:
 
 ```php
 php get_customers.php
@@ -37,6 +37,9 @@ php get_orders.php
 php get_pages.php
 php get_coupons.php
 php get_product_options.php
+php get_categories.php
+php get_currencies.php
+php get_brands.php
 ```
 
 It will log accordingly:
@@ -46,6 +49,9 @@ It will log accordingly:
 - All pages to `log/pages.log` file
 - All coupons to `log/coupons.log` file
 - All product options to `log/product_options.log` file
+- All categories to `log/get_categories.log` file
+- All currencies to `log/currencies.log` file
+- All brands to `log/brands.log` file
 
 ## Help
 

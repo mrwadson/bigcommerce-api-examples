@@ -19,7 +19,7 @@ $filter = [
 
 try {
     foreach ((new PageRequest())->getPages($filter) as $id => $page) {
-        Logger::getLogger('option', LOG_FILE)
+        Logger::getLogger('page', LOG_FILE)
             ->info(sprintf('Page #%d:  %s', $id, print_r($page, true)));
     }
 } catch (Throwable $e) {
